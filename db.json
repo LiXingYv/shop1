@@ -1,0 +1,20 @@
+{
+    "getNewsList": [
+        {
+            "title": "数据统计123eddfsdggddfggdf",
+            "url": "http://starcraft.com"
+        },
+        {
+            "title": "数据预测",
+            "url": "http://warcraft.com"
+        },
+        {
+            "title": "流量分析",
+            "url": "http://overwatch.com"
+        },
+        {
+            "title": "广告发布",
+            "url": "http://hearstone.com"
+        }
+    ]
+}
