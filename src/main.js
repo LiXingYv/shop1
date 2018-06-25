@@ -13,6 +13,8 @@ import DetailPubPage from './pages/detail/publish.vue'
 import OrderListPage from './pages/orderList.vue'
 import TestPage from './pages/test'
 
+import Store from './store'
+
 Vue.config.productionTip = false
 
 Vue.use(VueRouter)
@@ -63,6 +65,10 @@ let router = new VueRouter({
 new Vue({
     el: '#app',
     router,
+    store:Store,
     components: {Layout},
-    template: '<Layout/>'
+    template: '<Layout/>',
+    mounted () {
+        
+    }
 })

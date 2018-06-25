@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div @click = "resetComponent">
         <div class="app-head">
             <div class="app-head">
                 <div class="app-head-inner">
@@ -43,6 +43,7 @@
 </template>
 
 <script>
+    import { eventBus } from '../eventBus'
     import Dialog from './base/dialog'
     import LogForm from './logForm'
     import RegForm from './regForm'
@@ -79,6 +80,9 @@
             },
             quit() {
 
+            },
+            resetComponent () {
+                eventBus.$emit("reset-component")
             }
         }
     }

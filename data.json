@@ -3,7 +3,7 @@
         "name": "12345",
         "age": "567"
     },
-    "getNewsList123": [
+    "getNewsList": [
         {
             "title": "数据统计express",
             "url": "http://starcraft.com"

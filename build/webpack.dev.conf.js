@@ -17,7 +17,7 @@ var appData = require('../data.json')//加载本地数据文件
 var seller = appData.seller//获取对应的本地数据
 var createOrder = appData.createOrder
 var getPrice = appData.getPrice
-var getNewsList123 = appData.getNewsList123
+var getNewsList = appData.getNewsList123
 var login = appData.login
 var ratings = appData.ratings
 var getOrderList = appData.getOrderList
@@ -45,10 +45,10 @@ const devWebpackConfig = merge(baseWebpackConfig, {
                     data: seller
                 })//接口返回json数据，上面配置的数据seller就赋值给data请求后调用
             }),
-            app.get('/api/getNewsList123', (req, res) => {
+            app.get('/api/getNewsList', (req, res) => {
                 res.json({
                     errno: 0,
-                    data: getNewsList123
+                    data: getNewsList
                 })
             }),
             app.get('/api/ratings', (req, res) => {

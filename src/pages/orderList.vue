@@ -101,7 +101,12 @@
                     }
                 ],
                 currentOrder: 'asc',
-                tableData: []
+//                tableData: []
+            }
+        },
+        computed: {
+            tableData () {
+                return this.$store.getters.getOrderList
             }
         },
         watch: {
@@ -111,8 +116,13 @@
         },
         methods: {
             productChange (obj) {
-                this.productId = obj.value
-                this.getList()
+                this.$store.commit('updateParams',{
+                    key: this.productId,
+                    val: obj.value
+                })
+                this.$store.dispatch('fetchOrderList')
+//                this.productId = obj.value
+//                this.getList()
             },
             getStartDate (date) {
                 this.startDate = date
@@ -132,7 +142,7 @@
                 this.$http.post('/api/getOrderList', reqParams)
                         .then((res) => {
                     this.tableData = res.data.data.list;
-                console.log(res.data.data.list)
+
             },
                 (err) =>
                 {
@@ -156,7 +166,9 @@
             }
         },
         mounted () {
-            this.getList()
+//            this.getList()
+            this.$store.dispatch('fetchOrderList')
+//            console.log(this.$store)
         }
     }
 </script>
