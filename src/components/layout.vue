@@ -4,7 +4,7 @@
             <div class="app-head">
                 <div class="app-head-inner">
                     <router-link :to="{path:'/'}">
-                    <img src="../assets/logo.png" alt="">
+                    <img src="../assets/logo.png" alt=""><span style="color:#fff;font-size:20px;">vue商城</span>
                     </router-link>
                     <div class="head-nav">
                         <ul class="nav-list">

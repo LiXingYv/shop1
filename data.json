@@ -5,19 +5,23 @@
     },
     "getNewsList": [
         {
-            "title": "数据统计express",
+            "title": "数据统计新闻",
             "url": "http://starcraft.com"
         },
         {
-            "title": "数据预测",
+            "title": "数据预测不准确",
             "url": "http://warcraft.com"
         },
         {
-            "title": "流量分析",
+            "title": "流量分析手册发布",
             "url": "http://overwatch.com"
         },
         {
-            "title": "广告发布",
+            "title": "广告发布功能更新",
+            "url": "http://hearstone.com"
+        },
+        {
+            "title": "网站发布日期更新",
             "url": "http://hearstone.com"
         }
     ],

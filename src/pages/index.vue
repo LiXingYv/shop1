@@ -50,7 +50,7 @@
         },
         created: function () {
             this.$http.get('api/getNewsList').then ((res) => {
-                this.newsList = res.data
+                this.newsList = res.data.data
             }, (err)=> {
                 console.log(err)
             })
@@ -115,7 +115,24 @@
                         saleout: false
                     }
                 ],
-                newsList: [],
+                newsList: [
+                    {
+                        title:"新闻标题",
+                        url:"http://www.baidu.com"
+                    },
+                    {
+                        title:"新闻标题",
+                        url:"http://www.baidu.com"
+                    },
+                    {
+                        title:"新闻标题",
+                        url:"http://www.baidu.com"
+                    },
+                    {
+                        title:"新闻标题",
+                        url:"http://www.baidu.com"
+                    }
+                ],
                 productList: {
                     pc: {
                         title: 'PC产品',
@@ -170,6 +187,11 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+    a{text-decoration: none;}
+    .index-left a{color:#333;}
+    .index-left a:hover{
+        color: #00b801;
+    }
     .index-wrap {
         width: 1200px;
         margin: 0 auto;
@@ -220,16 +242,20 @@
 
     .index-board-list {
         overflow: hidden;
+        padding-top:1px;
+        padding-left:1px;
     }
 
     .index-board-item {
         float: left;
-        width: 400px;
+        width: 438px;
         background: #fff;
         box-shadow: 0 0 1px #ddd;
         padding: 20px;
         margin-right: 20px;
         margin-bottom: 20px;
+
+        box-sizing:border-box;
     }
 
     .index-board-item-inner {
@@ -269,12 +295,16 @@
     }
 
     .lastest-news {
-        min-height: 512px;
+        height: 484px;
     }
 
     .hot-tag {
         background: red;
         color: #fff;
+        font-size:12px;
+        border-radius:2px;
+        padding-left:4px;
+        padding-right:4px;
     }
 
     .new-item {

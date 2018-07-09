@@ -16,8 +16,8 @@ const app = express()
 var appData = require('../data.json')//加载本地数据文件
 var seller = appData.seller//获取对应的本地数据
 var createOrder = appData.createOrder
+var getNewsList = appData.getNewsList
 var getPrice = appData.getPrice
-var getNewsList = appData.getNewsList123
 var login = appData.login
 var ratings = appData.ratings
 var getOrderList = appData.getOrderList
@@ -61,6 +61,12 @@ const devWebpackConfig = merge(baseWebpackConfig, {
                     res.json({
                         errno: 0,
                         data: login
+                    })
+                }),
+                app.get('/api/getNewsList', (req, res) => {
+                    res.json({
+                        errno: 0,
+                        data: getNewsList
                     })
                 }),
             app.post('/api/foods', function (req, res) { // 注意这里改为post就可以了
